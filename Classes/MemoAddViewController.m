@@ -8,6 +8,8 @@
 
 #import "MemoAddViewController.h"
 
+#import "Memo.h"
+
 @implementation MemoAddViewController
 
 #pragma mark -
@@ -63,7 +65,7 @@
 	[self.navigationController dismissModalViewControllerAnimated:YES];
 	
 	// 追加したオブジェクトを削除
-	[[self.memo managedObjectContext] deleteObject:memo];
+	[[memo managedObjectContext] deleteObject:memo];
 	
 }
 

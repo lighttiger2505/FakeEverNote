@@ -10,6 +10,9 @@
 
 @protocol NewTagViewDelegate;
 
+/**
+ タグを新規作成するビュー
+ */
 @interface NewTagView : UIView {
 	id<NewTagViewDelegate> delegate;
 	UITextField *newTagName;

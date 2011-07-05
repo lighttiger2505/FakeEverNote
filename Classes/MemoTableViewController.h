@@ -9,15 +9,24 @@
 #import <UIKit/UIKit.h>
 #import "MemoAddViewController.h"
 
-@interface MemoTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>{
+@interface MemoTableViewController : UITableViewController <NSFetchedResultsControllerDelegate, UISearchDisplayDelegate>{
     NSFetchedResultsController *fetchedResultsController;
     NSManagedObjectContext *managedObjectContext;
+	
+	UISearchDisplayController *searchDisplayController;
+	
+	NSString        *savedSearchTerm_;
+    NSInteger       savedScopeButtonIndex_;
+    BOOL            searchWasActive_;
 }
 
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
+@property (nonatomic, retain) UISearchDisplayController *searchDisplayController;
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+@property (nonatomic, copy) NSString *savedSearchTerm;
+@property (nonatomic) NSInteger savedScopeButtonIndex;
+@property (nonatomic) BOOL searchWasActive;
 
 @end

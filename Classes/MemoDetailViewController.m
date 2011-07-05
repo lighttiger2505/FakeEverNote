@@ -8,6 +8,8 @@
 
 #import "MemoDetailViewController.h"
 
+#import "Memo.h"
+#import "Tag.h"
 #import "TagViewController.h"
 
 #define TITLE_CELL_HEIGHT 40
@@ -28,11 +30,13 @@
 
 - (void)viewDidUnload {
     [super viewDidUnload];
+	titleView = nil;
 	textView = nil;
 }
 
 
 - (void)dealloc {
+	[titleView release];
 	[textView release];
 	[memo release];
 	
@@ -48,7 +52,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	self.title = [self.memo valueForKey:@"text"];
+	self.title = memo.text;
 	
 	// ナビゲーションバー右にキーボードを画すボタンを追加
 	self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel 
@@ -57,7 +61,7 @@
 	self.tableView.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
 	
 	// タイトル入力のビューを作成して親のビューに追加
-	UITextField *aTitleView = [[[UITextField alloc] initWithFrame:CGRectMake(10, 8, 280, 30)] autorelease];
+	UITextField *aTitleView = [[UITextField alloc] init];
 	aTitleView.font = [UIFont systemFontOfSize:20.0f];
 	self.titleView = aTitleView;
 	[aTitleView release];
@@ -81,9 +85,9 @@
 	[super viewWillAppear:YES];
 	
 	// 渡されたオブジェクトからメモの内容を表示させる。
-	self.titleView.text = [memo valueForKey:@"title"];
-	self.textView.text = [memo valueForKey:@"text"];
-	//[textView scrollRangeToVisible:[textView selectedRange]];
+	self.titleView.text = memo.title;
+	self.textView.text = memo.text;
+	
 	[self.titleView becomeFirstResponder];
 }
 
@@ -103,12 +107,13 @@
  */
 - (void)saveMemo:(id)sender {
 	// 変更内容をデータオブジェクトに反映。
-	[self.memo setValue:self.titleView.text forKey:@"title"];
-	[self.memo setValue:self.textView.text forKey:@"text"];
+	memo.title = self.titleView.text;
+	memo.text = self.textView.text;
+	memo.timestamp = [[NSDate date] retain];
 	
 	// コンテキストに保存内容を反映。
 	NSError *error;
-	if (![[self.memo managedObjectContext] save:&error]) {
+	if (![[memo managedObjectContext] save:&error]) {
 		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 		exit(-1);  // Fail
 	}
@@ -177,16 +182,8 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{    
-	/*
-    CGSize bounds = CGSizeMake(self.tableView.frame.size.width, self.tableView.frame.size.height);
-    
-    CGSize size = [self.textView.text sizeWithFont: self.textView.font 
-								 constrainedToSize: bounds 
-									 lineBreakMode: UILineBreakModeCharacterWrap];
-    return size.height;
-	 */
-	
+{   
+	// 各セルに合った高さを設定
 	if (indexPath.row == 0) {
 		return TITLE_CELL_HEIGHT;
 	}
@@ -211,6 +208,7 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
+	// 各セルに合わせたセルを作成
 	if (indexPath.row == 0) {
 		[self configureTitleCell:cell atIndexPath:indexPath];
 	}
@@ -228,7 +226,11 @@
  */
 - (void)configureTitleCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath 
 {
-	[cell.contentView addSubview:self.titleView];
+	// セルに最適なサイズを取得してタイトル入力フィールドに設定
+	CGRect frame = CGRectInset(cell.contentView.bounds, 20, 10);
+	titleView.frame = frame;
+	// タイトル入力フィールドをセルに追加
+	[cell.contentView addSubview:titleView];
 }
 
 /**
@@ -236,7 +238,11 @@
  */
 - (void)configureTagCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-	cell.textLabel.text = @"tag";
+	NSString* tagListStr = @"";
+	for (Tag* entryTag in memo.tag) {
+		tagListStr = [tagListStr stringByAppendingFormat:@"'%@'", entryTag.name];
+	}
+	cell.textLabel.text = tagListStr;
 }
 
 /**
@@ -244,15 +250,19 @@
  */
 - (void)configureTextCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
+	// テキスト入力ビューをセルに追加
 	[cell.contentView addSubview:self.textView];
 }
 
 #pragma mark -
 #pragma mark Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath 
+{	
+	// タグのセルが選択された場合、タグを選択する画面へと遷移する。
 	if (indexPath.row == 1) {
 		TagViewController *aTagViewController = [[TagViewController alloc] initWithStyle:UITableViewStyleGrouped];
+		aTagViewController.memo = memo;
 		aTagViewController.managedObjectContext = self.memo.managedObjectContext;
 		[self.navigationController pushViewController:aTagViewController animated:YES];
 		[aTagViewController release];

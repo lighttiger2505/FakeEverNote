@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class Memo;
 
+/**
+ メモの詳細情報を表示するビューのコントローラー
+ */
 @interface MemoDetailViewController : UITableViewController <UITextViewDelegate>{
 	UITextField *titleView;
 	UITextView *textView;
-	NSManagedObject *memo;
+	Memo *memo;
 }
 
 @property(nonatomic, retain) UITextField *titleView;

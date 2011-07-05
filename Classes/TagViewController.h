@@ -9,13 +9,19 @@
 #import <UIKit/UIKit.h>
 #import "NewTagView.h"
 
+@class Memo;
+@class Tag;
+
+/**
+ タグ選択を行うビューのコントローラー
+ */
 @interface TagViewController : UITableViewController <NSFetchedResultsControllerDelegate, NewTagViewDelegate>{
     NSFetchedResultsController *fetchedResultsController;
     NSManagedObjectContext *managedObjectContext;
 	
 	NewTagView *newTagView;
 	
-	NSManagedObject *memo;
+	Memo *memo;
 }
 
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
@@ -26,5 +32,6 @@
 @property (nonatomic, retain) NSManagedObject *memo;
 
 - (void)configureTagNameCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+- (BOOL)isEntryTag:(Tag*)tag;
 
 @end
