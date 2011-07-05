@@ -8,8 +8,11 @@
 
 #import "MemoDetailViewController.h"
 
+#import "TagViewController.h"
+
 #define TITLE_CELL_HEIGHT 40
-#define TEXT_CELL_HEIGHT 418
+#define TAG_CELL_HEIGHT   40
+#define TEXT_CELL_HEIGHT  418
 
 @implementation MemoDetailViewController
 
@@ -54,12 +57,8 @@
 	self.tableView.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
 	
 	// タイトル入力のビューを作成して親のビューに追加
-	UITextField *aTitleView = [[UITextField alloc] init];
-	aTitleView.frame = CGRectMake(0, 0, 320, TITLE_CELL_HEIGHT);
+	UITextField *aTitleView = [[[UITextField alloc] initWithFrame:CGRectMake(10, 8, 280, 30)] autorelease];
 	aTitleView.font = [UIFont systemFontOfSize:20.0f];
-	aTitleView.backgroundColor = [UIColor lightGrayColor];
-	aTitleView.textAlignment = UITextAlignmentCenter;
-	aTitleView.contentVerticalAlignment = UIControlContentHorizontalAlignmentCenter;
 	self.titleView = aTitleView;
 	[aTitleView release];
 	
@@ -84,8 +83,8 @@
 	// 渡されたオブジェクトからメモの内容を表示させる。
 	self.titleView.text = [memo valueForKey:@"title"];
 	self.textView.text = [memo valueForKey:@"text"];
-	[textView scrollRangeToVisible:[textView selectedRange]];
-	[self.textView becomeFirstResponder];
+	//[textView scrollRangeToVisible:[textView selectedRange]];
+	[self.titleView becomeFirstResponder];
 }
 
 /**
@@ -174,7 +173,7 @@
  */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return 3;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -192,6 +191,9 @@
 		return TITLE_CELL_HEIGHT;
 	}
 	if (indexPath.row == 1) {
+		return TAG_CELL_HEIGHT;
+	}
+	if (indexPath.row == 2) {
 		return TEXT_CELL_HEIGHT;
 	}
 	return 0;
@@ -213,6 +215,9 @@
 		[self configureTitleCell:cell atIndexPath:indexPath];
 	}
 	if (indexPath.row == 1) {
+		[self configureTagCell:cell atIndexPath:indexPath];
+	}
+	if (indexPath.row == 2) {
 		[self configureTextCell:cell atIndexPath:indexPath];
 	}
     return cell;
@@ -227,10 +232,31 @@
 }
 
 /**
+ タグ入力セルの内容を編集
+ */
+- (void)configureTagCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+{
+	cell.textLabel.text = @"tag";
+}
+
+/**
  テキスト入力セルの内容を編集
  */
 - (void)configureTextCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
 	[cell.contentView addSubview:self.textView];
 }
+
+#pragma mark -
+#pragma mark Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	if (indexPath.row == 1) {
+		TagViewController *aTagViewController = [[TagViewController alloc] initWithStyle:UITableViewStyleGrouped];
+		aTagViewController.managedObjectContext = self.memo.managedObjectContext;
+		[self.navigationController pushViewController:aTagViewController animated:YES];
+		[aTagViewController release];
+	}
+}
+
 @end

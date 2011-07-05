@@ -21,6 +21,7 @@
 
 - (void)saveMemo:(id)sender;
 - (void)configureTitleCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+- (void)configureTagCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 - (void)configureTextCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 
 @end

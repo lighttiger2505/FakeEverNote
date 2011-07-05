@@ -133,6 +133,7 @@
  */
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
+	// タイトルを表示
     NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
 	NSString *memoTitle = [[managedObject valueForKey:@"title"] description];
     cell.textLabel.text = memoTitle;
@@ -151,7 +152,6 @@
 	detailViewController.memo = [self.fetchedResultsController objectAtIndexPath:indexPath];
 	[self.navigationController pushViewController:detailViewController animated:YES];
     [detailViewController release];
-    
 }
 
 #pragma mark - Fetched results controller   
@@ -177,7 +177,10 @@
     [fetchRequest setSortDescriptors:sortDescriptors];
     
     // フェッチのコントローラーを作成
-    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest 
+																								managedObjectContext:self.managedObjectContext 
+																								  sectionNameKeyPath:nil 
+																										   cacheName:nil];
     aFetchedResultsController.delegate = self;
     self.fetchedResultsController = aFetchedResultsController;
     
