@@ -52,7 +52,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	self.title = memo.text;
+	self.title = memo.title;
 	
 	// ナビゲーションバー右にキーボードを画すボタンを追加
 	self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel 
@@ -88,6 +88,7 @@
 	self.titleView.text = memo.title;
 	self.textView.text = memo.text;
 	
+	[self.tableView reloadData];
 	[self.titleView becomeFirstResponder];
 }
 
@@ -227,7 +228,7 @@
 - (void)configureTitleCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath 
 {
 	// セルに最適なサイズを取得してタイトル入力フィールドに設定
-	CGRect frame = CGRectInset(cell.contentView.bounds, 20, 10);
+	CGRect frame = CGRectInset(cell.contentView.bounds, 16, 8);
 	titleView.frame = frame;
 	// タイトル入力フィールドをセルに追加
 	[cell.contentView addSubview:titleView];
@@ -252,6 +253,13 @@
 {
 	// テキスト入力ビューをセルに追加
 	[cell.contentView addSubview:self.textView];
+}
+
+- (void)tableView:(UITableView *)tableView
+  willDisplayCell:(UITableViewCell *)cell
+forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	cell.backgroundColor = [UIColor whiteColor];
 }
 
 #pragma mark -

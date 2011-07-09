@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSManagedObjectModel_CurrentVersionName</key>
+	<string>CoreDataMemo 3</string>
+	<key>NSManagedObjectModel_VersionHashes</key>
+	<dict>
+		<key>CoreDataMemo</key>
+		<dict>
+			<key>Memo</key>
+			<data>
+			rg74nci2rwLzYOKYQt9emm7py01NMr1nZ/qEfnVystE=
+			</data>
+		</dict>
+		<key>CoreDataMemo 2</key>
+		<dict>
+			<key>Memo</key>
+			<data>
+			nafjgBbm1Oct1ro/j5cJhZuzeH6+5p4i03Qx33lVF3o=
+			</data>
+		</dict>
+		<key>CoreDataMemo 3</key>
+		<dict>
+			<key>Memo</key>
+			<data>
+			jcrEL7lz6yttzr+hJ9wx4uCs0m4WTRtu0vdiYzQCylg=
+			</data>
+			<key>Tag</key>
+			<data>
+			2HhZ8yXbdppwU6LwBgUCfu/95iC98juJ076hkcREMPg=
+			</data>
+		</dict>
+	</dict>
+</dict>
+</plist>

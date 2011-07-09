@@ -329,7 +329,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>7A022D7113C3733000BE48CA</string>
+										<string>7AE9572513C85658009B3AD7</string>
 										<key>history</key>
 										<array>
 											<string>7AE75F9B13ADD955001FCE49</string>
@@ -340,7 +340,6 @@
 											<string>7A07F2A313B56353007CBFE3</string>
 											<string>7A07F38D13B574E0007CBFE3</string>
 											<string>7A66BD9F13B590F600D8EBCF</string>
-											<string>7A8D011513B7779500030C66</string>
 											<string>7AF380E413BB6F04002FC304</string>
 											<string>7AF380EA13BB6F86002FC304</string>
 											<string>7A022BCD13C35BAC00BE48CA</string>
@@ -348,16 +347,17 @@
 											<string>7A022C0813C35EC100BE48CA</string>
 											<string>7A022C0A13C35EC100BE48CA</string>
 											<string>7A022C0B13C35EC100BE48CA</string>
-											<string>7A022CBA13C36BC100BE48CA</string>
 											<string>7A022CBB13C36BC100BE48CA</string>
 											<string>7A022D4513C370DE00BE48CA</string>
-											<string>7A022D5F13C372CB00BE48CA</string>
-											<string>7A022D6A13C3733000BE48CA</string>
-											<string>7A022D6B13C3733000BE48CA</string>
-											<string>7A022D6C13C3733000BE48CA</string>
-											<string>7A022D6D13C3733000BE48CA</string>
-											<string>7A022D6E13C3733000BE48CA</string>
-											<string>7A022D6F13C3733000BE48CA</string>
+											<string>7AE956C513C83201009B3AD7</string>
+											<string>7AE956C613C83201009B3AD7</string>
+											<string>7AE956C813C83201009B3AD7</string>
+											<string>7AE9570913C8357D009B3AD7</string>
+											<string>7AE9570A13C8357D009B3AD7</string>
+											<string>7AE9570B13C8357D009B3AD7</string>
+											<string>7AE9570C13C8357D009B3AD7</string>
+											<string>7AE9570D13C8357D009B3AD7</string>
+											<string>7AE9571F13C8372C009B3AD7</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -448,7 +448,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1102, -27}}</string>
+										<string>{{0, 0}, {568, 405}}</string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -476,11 +476,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>7A022B9E13C3582F00BE48CA</string>
+				<string>7AE9568E13C82F9D009B3AD7</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>7A022B9F13C3582F00BE48CA</string>
+				<string>7AE9568F13C82F9D009B3AD7</string>
 				<string>7AF4C17F13AA3D8A00825CA9</string>
-				<string>7A022BA013C3582F00BE48CA</string>
+				<string>7AE9569013C82F9D009B3AD7</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -533,14 +533,14 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {1440, 253}}</string>
+						<string>{{0, 0}, {1440, 239}}</string>
 						<key>RubberWindowFrame</key>
 						<string>0 59 1440 819 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugCLIModule</string>
 					<key>Proportion</key>
-					<string>253pt</string>
+					<string>239pt</string>
 				</dict>
 				<dict>
 					<key>ContentConfiguration</key>
@@ -559,8 +559,8 @@
 								<string>yes</string>
 								<key>sizes</key>
 								<array>
-									<string>{{0, 0}, {703, 255}}</string>
-									<string>{{703, 0}, {737, 255}}</string>
+									<string>{{0, 0}, {703, 261}}</string>
+									<string>{{703, 0}, {737, 261}}</string>
 								</array>
 							</dict>
 							<key>VerticalSplitView</key>
@@ -575,8 +575,8 @@
 								<string>yes</string>
 								<key>sizes</key>
 								<array>
-									<string>{{0, 0}, {1440, 255}}</string>
-									<string>{{0, 255}, {1440, 265}}</string>
+									<string>{{0, 0}, {1440, 261}}</string>
+									<string>{{0, 261}, {1440, 273}}</string>
 								</array>
 							</dict>
 						</dict>
@@ -596,7 +596,7 @@
 						<key>DebugSTDIOWindowFrame</key>
 						<string>{{200, 200}, {500, 300}}</string>
 						<key>Frame</key>
-						<string>{{0, 258}, {1440, 520}}</string>
+						<string>{{0, 244}, {1440, 534}}</string>
 						<key>PBXDebugSessionStackFrameViewKey</key>
 						<dict>
 							<key>DebugVariablesTableConfiguration</key>
@@ -609,7 +609,7 @@
 								<real>507</real>
 							</array>
 							<key>Frame</key>
-							<string>{{703, 0}, {737, 255}}</string>
+							<string>{{703, 0}, {737, 261}}</string>
 							<key>RubberWindowFrame</key>
 							<string>0 59 1440 819 0 0 1440 878 </string>
 						</dict>
@@ -619,7 +619,7 @@
 					<key>Module</key>
 					<string>PBXDebugSessionModule</string>
 					<key>Proportion</key>
-					<string>520pt</string>
+					<string>534pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -637,13 +637,13 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>7A022BA113C3582F00BE48CA</string>
+				<string>7AE9569113C82F9D009B3AD7</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>7A022BA213C3582F00BE48CA</string>
-				<string>7A022BA313C3582F00BE48CA</string>
-				<string>7A022BA413C3582F00BE48CA</string>
-				<string>7A022BA513C3582F00BE48CA</string>
+				<string>7AE9569213C82F9D009B3AD7</string>
+				<string>7AE9569313C82F9D009B3AD7</string>
+				<string>7AE9569413C82F9D009B3AD7</string>
+				<string>7AE9569513C82F9D009B3AD7</string>
 				<string>7AF4C17F13AA3D8A00825CA9</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
@@ -678,9 +678,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>7A022D7213C3733000BE48CA</string>
-		<string>7A022BB413C3588500BE48CA</string>
-		<string>7A022BA713C3582F00BE48CA</string>
+		<string>7AE956A413C8301D009B3AD7</string>
+		<string>7AE9569713C82F9D009B3AD7</string>
 		<string>/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/CoreDataMemo.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
