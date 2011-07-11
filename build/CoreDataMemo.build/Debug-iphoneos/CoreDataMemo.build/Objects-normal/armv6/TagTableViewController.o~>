@@ -1,0 +1,5 @@
+/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/TagTableViewController.m: In function '-[TagTableViewController tableView:cellForRowAtIndexPath:]':
+/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/TagTableViewController.m:125: warning: 'TagTableViewController' may not respond to '-configureCell:atIndexPath:'
+/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/TagTableViewController.m:125: warning: (Messages without a matching method signature
+/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/TagTableViewController.m:125: warning: will be assumed to return 'id' and accept
+/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/TagTableViewController.m:125: warning: '...' as arguments.)

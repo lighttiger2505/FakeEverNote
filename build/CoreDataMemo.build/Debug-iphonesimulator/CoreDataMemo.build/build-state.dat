@@ -1,7 +1,7 @@
 TCoreDataMemo
 v7
 r0
-t331887997.193525
+t331989130.627009
 cCheck dependencies
 cProcessInfoPlistFile "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app/Info.plist" CoreDataMemo-Info.plist
 cCompileXIB "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/MainWindow.xib"
@@ -12,10 +12,11 @@ cCompileC build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Obje
 cCompileC build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/MemoTableViewController.o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/MemoTableViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/MemoDetailViewController.o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/MemoDetailViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/MemoAddViewController.o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/MemoAddViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/TagViewController.o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/TagViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/TagSelectViewController.o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/TagSelectViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/NewTagView.o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/NewTagView.m" normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/Tag.o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/../Tag.m" normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/Memo.o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/../Memo.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/TagTableViewController.o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/TagTableViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
 cLd "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app/CoreDataMemo" normal i386
 cGenerateDSYMFile "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app.dSYM" "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app/CoreDataMemo"
 cTouch "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app"
@@ -91,18 +92,19 @@ s212
 i"Tag.h"
 
 N/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/CoreDataMemoAppDelegate.h
-c000000004DFA018C00000000000003E8
-t1308230028
-s1000
+c000000004E185A7900000000000003D9
+t1310218873
+s985
 i<UIKit/UIKit.h>
 i<CoreData/CoreData.h>
 
 N/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/CoreDataMemoAppDelegate.m
-c000000004E052BCD00000000000020AB
-t1308961741
-s8363
+c000000004E185A880000000000002305
+t1310218888
+s8965
 i"CoreDataMemoAppDelegate.h"
 i"MemoTableViewController.h"
+i"TagTableViewController.h"
 
 N/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/MemoAddViewController.h
 c000000004DFE28340000000000000158
@@ -125,13 +127,13 @@ s872
 i<UIKit/UIKit.h>
 
 N/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/MemoDetailViewController.m
-c000000004E17FDFC0000000000001CF4
-t1310195196
-s7412
+c000000004E18561C0000000000001D05
+t1310217756
+s7429
 i"MemoDetailViewController.h"
 i"Memo.h"
 i"Tag.h"
-i"TagViewController.h"
+i"TagSelectViewController.h"
 
 N/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/MemoTableViewController.h
 c000000004E1320E500000000000003FD
@@ -141,8 +143,8 @@ i<UIKit/UIKit.h>
 i"MemoAddViewController.h"
 
 N/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/MemoTableViewController.m
-c000000004E17FDAB0000000000003794
-t1310195115
+c000000004E1989090000000000003794
+t1310296329
 s14228
 i"MemoTableViewController.h"
 i"Memo.h"
@@ -158,6 +160,34 @@ c000000004E10E8CB0000000000000507
 t1309731019
 s1287
 i"NewTagView.h"
+
+N/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/TagSelectViewController.h
+c000000004E18561C00000000000003BA
+t1310217756
+s954
+i<UIKit/UIKit.h>
+i"NewTagView.h"
+
+N/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/TagSelectViewController.m
+c000000004E18561C00000000000020C6
+t1310217756
+s8390
+i"TagSelectViewController.h"
+i"Memo.h"
+i"Tag.h"
+
+N/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/TagTableViewController.h
+c000000004E1857DB000000000000027E
+t1310218203
+s638
+i<UIKit/UIKit.h>
+
+N/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/TagTableViewController.m
+c000000004E19890900000000000018BD
+t1310296329
+s6333
+i"TagTableViewController.h"
+i"Tag.h"
 
 N/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/TagViewController.h
 c000000004E1339EC00000000000003B4
@@ -231,13 +261,13 @@ s523
 i<CoreData/CoreData.h>
 
 N/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/CoreDataMemo.LinkFileList
-c000000004E13232A0000000000000684
-t1309877034
-s1668
+c000000004E185972000000000000074B
+t1310218610
+s1867
 
 N/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/CoreDataMemoAppDelegate.o
-t1309881360
-s70320
+t1310218888
+s72424
 
 N/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/Memo.o
 t1309877034
@@ -248,11 +278,11 @@ t1309881360
 s47368
 
 N/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/MemoDetailViewController.o
-t1310195197
-s73796
+t1310218610
+s73832
 
 N/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/MemoTableViewController.o
-t1310195116
+t1310296330
 s90108
 
 N/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/NewTagView.o
@@ -263,6 +293,14 @@ N/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNo
 t1309877034
 s5300
 
+N/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/TagSelectViewController.o
+t1310218610
+s70672
+
+N/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/TagTableViewController.o
+t1310296330
+s56768
+
 N/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/TagViewController.o
 t1309882860
 s70132
@@ -272,16 +310,16 @@ t1309876397
 s6396
 
 N/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app
-t1310195197
+t1310296330
 s238
 
 N/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app.dSYM
-t1310195197
+t1310296330
 s102
 
 N/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app/CoreDataMemo
-t1310195197
-s74928
+t1310296330
+s82328
 
 N/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app/CoreDataMemo.momd
 t1309877034
@@ -316,11 +354,11 @@ s906
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies331887996#331887996#0(0"0(0#1#0"8622537152#0"0#
+lSLF07#2@18"Check dependencies331989130#331989130#0(0"0(0#1#0"8663218368#0"0#
 
 CCompileC build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/CoreDataMemoAppDelegate.o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/CoreDataMemoAppDelegate.m" normal i386 objective-c com.apple.compilers.gcc.4_2
-s331574160.539138
-e331574160.704592
+s331911688.306892
+e331911688.539690
 r1
 xCompileC
 xbuild/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/CoreDataMemoAppDelegate.o
@@ -329,7 +367,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@123"Compile /Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/CoreDataMemoAppDelegate.m331574160#331574160#0(0"0(0#0#115"/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/CoreDataMemoAppDelegate.m8621720224#2555"    cd "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-generated-files.hmap" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-own-target-headers.hmap" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-all-target-headers.hmap" -iquote "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-project-headers.hmap" "-F/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/include" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/DerivedSources/i386" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/DerivedSources" -include /var/folders/Jv/JvHengT5F+GbF-C7fz6A+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CoreDataMemo_Prefix-gikljebudbpwrgfwdmvwdgnnicxv/CoreDataMemo_Prefix.pch -c "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/CoreDataMemoAppDelegate.m" -o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/CoreDataMemoAppDelegate.o"0#
+lSLF07#2@123"Compile /Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/CoreDataMemoAppDelegate.m331911688#331911688#0(0"0(0#0#115"/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/CoreDataMemoAppDelegate.m8653028096#2555"    cd "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-generated-files.hmap" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-own-target-headers.hmap" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-all-target-headers.hmap" -iquote "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-project-headers.hmap" "-F/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/include" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/DerivedSources/i386" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/DerivedSources" -include /var/folders/Jv/JvHengT5F+GbF-C7fz6A+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CoreDataMemo_Prefix-gikljebudbpwrgfwdmvwdgnnicxv/CoreDataMemo_Prefix.pch -c "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/CoreDataMemoAppDelegate.m" -o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/CoreDataMemoAppDelegate.o"0#
 
 CCompileC build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/Memo.o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/../Memo.m" normal i386 objective-c com.apple.compilers.gcc.4_2
 s331569834.848408
@@ -361,8 +399,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@121"Compile /Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/MemoAddViewController.m331574160#331574160#0(0"0(0#0#113"/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/MemoAddViewController.m8622906048#2551"    cd "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-generated-files.hmap" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-own-target-headers.hmap" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-all-target-headers.hmap" -iquote "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-project-headers.hmap" "-F/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/include" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/DerivedSources/i386" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/DerivedSources" -include /var/folders/Jv/JvHengT5F+GbF-C7fz6A+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CoreDataMemo_Prefix-gikljebudbpwrgfwdmvwdgnnicxv/CoreDataMemo_Prefix.pch -c "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/MemoAddViewController.m" -o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/MemoAddViewController.o"0#
 
 CCompileC build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/MemoDetailViewController.o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/MemoDetailViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
-s331887996.913644
-e331887997.131644
+s331911410.118103
+e331911410.324510
 r1
 xCompileC
 xbuild/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/MemoDetailViewController.o
@@ -371,11 +409,11 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@124"Compile /Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/MemoDetailViewController.m331887996#331887997#0(0"0(0#0#116"/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/MemoDetailViewController.m8621653248#2557"    cd "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-generated-files.hmap" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-own-target-headers.hmap" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-all-target-headers.hmap" -iquote "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-project-headers.hmap" "-F/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/include" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/DerivedSources/i386" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/DerivedSources" -include /var/folders/Jv/JvHengT5F+GbF-C7fz6A+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CoreDataMemo_Prefix-gikljebudbpwrgfwdmvwdgnnicxv/CoreDataMemo_Prefix.pch -c "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/MemoDetailViewController.m" -o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/MemoDetailViewController.o"0#
+lSLF07#2@124"Compile /Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/MemoDetailViewController.m331911410#331911410#0(0"0(0#0#116"/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/MemoDetailViewController.m8658702112#2557"    cd "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-generated-files.hmap" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-own-target-headers.hmap" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-all-target-headers.hmap" -iquote "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-project-headers.hmap" "-F/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/include" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/DerivedSources/i386" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/DerivedSources" -include /var/folders/Jv/JvHengT5F+GbF-C7fz6A+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CoreDataMemo_Prefix-gikljebudbpwrgfwdmvwdgnnicxv/CoreDataMemo_Prefix.pch -c "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/MemoDetailViewController.m" -o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/MemoDetailViewController.o"0#
 
 CCompileC build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/MemoTableViewController.o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/MemoTableViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
-s331887915.930206
-e331887916.194397
+s331989130.095640
+e331989130.437642
 r1
 xCompileC
 xbuild/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/MemoTableViewController.o
@@ -384,7 +422,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@123"Compile /Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/MemoTableViewController.m331887915#331887916#0(0"0(0#0#115"/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/MemoTableViewController.m8621157024#2555"    cd "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-generated-files.hmap" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-own-target-headers.hmap" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-all-target-headers.hmap" -iquote "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-project-headers.hmap" "-F/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/include" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/DerivedSources/i386" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/DerivedSources" -include /var/folders/Jv/JvHengT5F+GbF-C7fz6A+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CoreDataMemo_Prefix-gikljebudbpwrgfwdmvwdgnnicxv/CoreDataMemo_Prefix.pch -c "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/MemoTableViewController.m" -o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/MemoTableViewController.o"0#
+lSLF07#2@123"Compile /Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/MemoTableViewController.m331989130#331989130#0(0"0(0#0#115"/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/MemoTableViewController.m8660083360#2555"    cd "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-generated-files.hmap" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-own-target-headers.hmap" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-all-target-headers.hmap" -iquote "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-project-headers.hmap" "-F/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/include" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/DerivedSources/i386" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/DerivedSources" -include /var/folders/Jv/JvHengT5F+GbF-C7fz6A+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CoreDataMemo_Prefix-gikljebudbpwrgfwdmvwdgnnicxv/CoreDataMemo_Prefix.pch -c "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/MemoTableViewController.m" -o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/MemoTableViewController.o"0#
 
 CCompileC build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/NewTagView.o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/NewTagView.m" normal i386 objective-c com.apple.compilers.gcc.4_2
 s331574202.732301
@@ -414,6 +452,32 @@ lSLF07#2@106"Compile /Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/Cor
 
 CCompileC build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/Tag.o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/CoreDataMemo.xcdatamodeld/Tag.m" normal i386 objective-c com.apple.compilers.gcc.4_2
 r0
+
+CCompileC build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/TagSelectViewController.o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/TagSelectViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s331911410.119447
+e331911410.322885
+r1
+xCompileC
+xbuild/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/TagSelectViewController.o
+x/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/TagSelectViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@123"Compile /Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/TagSelectViewController.m331911410#331911410#0(0"0(0#0#115"/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/TagSelectViewController.m8654481792#2555"    cd "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-generated-files.hmap" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-own-target-headers.hmap" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-all-target-headers.hmap" -iquote "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-project-headers.hmap" "-F/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/include" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/DerivedSources/i386" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/DerivedSources" -include /var/folders/Jv/JvHengT5F+GbF-C7fz6A+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CoreDataMemo_Prefix-gikljebudbpwrgfwdmvwdgnnicxv/CoreDataMemo_Prefix.pch -c "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/TagSelectViewController.m" -o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/TagSelectViewController.o"0#
+
+CCompileC build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/TagTableViewController.o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/TagTableViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s331989130.201701
+e331989130.433573
+r1
+xCompileC
+xbuild/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/TagTableViewController.o
+x/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/TagTableViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@122"Compile /Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/TagTableViewController.m331989130#331989130#0(0"0(0#0#114"/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/TagTableViewController.m8649397888#2553"    cd "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-generated-files.hmap" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-own-target-headers.hmap" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-all-target-headers.hmap" -iquote "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/CoreDataMemo-project-headers.hmap" "-F/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/include" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/DerivedSources/i386" "-I/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/DerivedSources" -include /var/folders/Jv/JvHengT5F+GbF-C7fz6A+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CoreDataMemo_Prefix-gikljebudbpwrgfwdmvwdgnnicxv/CoreDataMemo_Prefix.pch -c "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/TagTableViewController.m" -o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/TagTableViewController.o"0#
 
 CCompileC build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/TagViewController.o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/TagViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
 s331575660.683326
@@ -459,23 +523,23 @@ x/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNo
 lSLF07#2@112"DataModelVersionCompile build/Debug-iphonesimulator/CoreDataMemo.app/CoreDataMemo.momd CoreDataMemo.xcdatamodeld331569834#331569834#0(0"0(0#0#107"/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/CoreDataMemo.xcdatamodeld8622701120#536"    cd "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/momc -XD_MOMC_TARGET_VERSION=10.6 "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/CoreDataMemo.xcdatamodeld" "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app/CoreDataMemo.momd"0#
 
 CGenerateDSYMFile "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app.dSYM" "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app/CoreDataMemo"
-s331887997.160558
-e331887997.189994
+s331989130.586898
+e331989130.624391
 r1
 xGenerateDSYMFile
 x/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app.dSYM
 x/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app/CoreDataMemo
-lSLF07#2@124"GenerateDSYMFile build/Debug-iphonesimulator/CoreDataMemo.app.dSYM build/Debug-iphonesimulator/CoreDataMemo.app/CoreDataMemo331887997#331887997#0(0"0(0#0#139"/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app/CoreDataMemo8622605856#533"    cd "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app/CoreDataMemo" -o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app.dSYM"0#
+lSLF07#2@124"GenerateDSYMFile build/Debug-iphonesimulator/CoreDataMemo.app.dSYM build/Debug-iphonesimulator/CoreDataMemo.app/CoreDataMemo331989130#331989130#0(0"0(0#0#139"/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app/CoreDataMemo8589991040#533"    cd "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app/CoreDataMemo" -o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app.dSYM"0#
 
 CLd "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app/CoreDataMemo" normal i386
-s331887997.131738
-e331887997.160458
+s331989130.437717
+e331989130.586791
 r1
 xLd
 x/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app/CoreDataMemo
 xnormal
 xi386
-lSLF07#2@144"Link /Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app/CoreDataMemo331887997#331887997#0(0"0(0#0#0"8622087552#1170"    cd "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote"    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk "-L/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator" "-F/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator" -filelist "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/CoreDataMemo.LinkFileList" -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreData -o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app/CoreDataMemo"0#
+lSLF07#2@144"Link /Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app/CoreDataMemo331989130#331989130#0(0"0(0#0#0"8659801600#1170"    cd "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote"    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk "-L/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator" "-F/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator" -filelist "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/CoreDataMemo.LinkFileList" -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreData -o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app/CoreDataMemo"0#
 
 CProcessInfoPlistFile "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app/Info.plist" CoreDataMemo-Info.plist
 s331569196.262343
@@ -490,10 +554,10 @@ CProcessPCH /var/folders/Jv/JvHengT5F+GbF-C7fz6A+k+++TI/-Caches-/com.apple.Xcode
 r0
 
 CTouch "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app"
-s331887997.190118
-e331887997.193456
+s331989130.624524
+e331989130.626974
 r1
 xTouch
 x/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app
-lSLF07#2@132"Touch /Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app331887997#331887997#0(0"0(0#0#0"8622384256#373"    cd "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app"0#
+lSLF07#2@132"Touch /Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app331989130#331989130#0(0"0(0#0#0"8656692160#373"    cd "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app"0#
 

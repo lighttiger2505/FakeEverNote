@@ -17,7 +17,8 @@
 		28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; };
 		7A022BC013C35A6B00BE48CA /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A022BBD13C35A6B00BE48CA /* Tag.m */; };
 		7A022BC113C35A6B00BE48CA /* Memo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A022BBF13C35A6B00BE48CA /* Memo.m */; };
-		7A8D011113B7761600030C66 /* TagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8D011013B7761600030C66 /* TagViewController.m */; };
+		7A09C45113C88D7D00F41B96 /* TagTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A09C45013C88D7D00F41B96 /* TagTableViewController.m */; };
+		7A8D011113B7761600030C66 /* TagSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8D011013B7761600030C66 /* TagSelectViewController.m */; };
 		7AC7889C13C1194E0034A251 /* NewTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC7889B13C1194E0034A251 /* NewTagView.m */; };
 		7AF4C14213AA38E200825CA9 /* MemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF4C14113AA38E200825CA9 /* MemoTableViewController.m */; };
 		7AF4C1D413AA401700825CA9 /* MemoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF4C1D313AA401700825CA9 /* MemoDetailViewController.m */; };
@@ -41,8 +42,10 @@
 		7A022BBE13C35A6B00BE48CA /* Memo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Memo.h; path = ../Memo.h; sourceTree = "<group>"; };
 		7A022BBF13C35A6B00BE48CA /* Memo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Memo.m; path = ../Memo.m; sourceTree = "<group>"; };
 		7A07F29013B5620D007CBFE3 /* CoreDataMemo 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CoreDataMemo 2.xcdatamodel"; sourceTree = "<group>"; };
-		7A8D010F13B7761600030C66 /* TagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagViewController.h; sourceTree = "<group>"; };
-		7A8D011013B7761600030C66 /* TagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagViewController.m; sourceTree = "<group>"; };
+		7A09C44F13C88D7D00F41B96 /* TagTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagTableViewController.h; sourceTree = "<group>"; };
+		7A09C45013C88D7D00F41B96 /* TagTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagTableViewController.m; sourceTree = "<group>"; };
+		7A8D010F13B7761600030C66 /* TagSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagSelectViewController.h; sourceTree = "<group>"; };
+		7A8D011013B7761600030C66 /* TagSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagSelectViewController.m; sourceTree = "<group>"; };
 		7AB0663713B58D48005CAA2E /* CoreDataMemo 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CoreDataMemo 3.xcdatamodel"; sourceTree = "<group>"; };
 		7AC7889A13C1194E0034A251 /* NewTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTagView.h; sourceTree = "<group>"; };
 		7AC7889B13C1194E0034A251 /* NewTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTagView.m; sourceTree = "<group>"; };
@@ -159,10 +162,12 @@
 		7A8D011313B7777D00030C66 /* Tag */ = {
 			isa = PBXGroup;
 			children = (
+				7A09C44F13C88D7D00F41B96 /* TagTableViewController.h */,
+				7A09C45013C88D7D00F41B96 /* TagTableViewController.m */,
 				7AC7889A13C1194E0034A251 /* NewTagView.h */,
 				7AC7889B13C1194E0034A251 /* NewTagView.m */,
-				7A8D010F13B7761600030C66 /* TagViewController.h */,
-				7A8D011013B7761600030C66 /* TagViewController.m */,
+				7A8D010F13B7761600030C66 /* TagSelectViewController.h */,
+				7A8D011013B7761600030C66 /* TagSelectViewController.m */,
 			);
 			name = Tag;
 			sourceTree = "<group>";
@@ -233,10 +238,11 @@
 				7AF4C14213AA38E200825CA9 /* MemoTableViewController.m in Sources */,
 				7AF4C1D413AA401700825CA9 /* MemoDetailViewController.m in Sources */,
 				7AF4C1E113AA410600825CA9 /* MemoAddViewController.m in Sources */,
-				7A8D011113B7761600030C66 /* TagViewController.m in Sources */,
+				7A8D011113B7761600030C66 /* TagSelectViewController.m in Sources */,
 				7AC7889C13C1194E0034A251 /* NewTagView.m in Sources */,
 				7A022BC013C35A6B00BE48CA /* Tag.m in Sources */,
 				7A022BC113C35A6B00BE48CA /* Memo.m in Sources */,
+				7A09C45113C88D7D00F41B96 /* TagTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

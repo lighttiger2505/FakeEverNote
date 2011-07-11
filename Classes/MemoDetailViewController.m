@@ -10,7 +10,7 @@
 
 #import "Memo.h"
 #import "Tag.h"
-#import "TagViewController.h"
+#import "TagSelectViewController.h"
 
 #define TITLE_CELL_HEIGHT 40
 #define TAG_CELL_HEIGHT   40
@@ -269,7 +269,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 {	
 	// タグのセルが選択された場合、タグを選択する画面へと遷移する。
 	if (indexPath.row == 1) {
-		TagViewController *aTagViewController = [[TagViewController alloc] initWithStyle:UITableViewStyleGrouped];
+		TagSelectViewController *aTagViewController = [[TagSelectViewController alloc] initWithStyle:UITableViewStyleGrouped];
 		aTagViewController.memo = memo;
 		aTagViewController.managedObjectContext = self.memo.managedObjectContext;
 		[self.navigationController pushViewController:aTagViewController animated:YES];

@@ -9,11 +9,12 @@
 #import "CoreDataMemoAppDelegate.h"
 
 #import "MemoTableViewController.h"
+#import "TagTableViewController.h"
 
 @implementation CoreDataMemoAppDelegate
 
 @synthesize window;
-@synthesize navigationController;
+@synthesize tabBarController;
 
 
 #pragma mark -
@@ -24,11 +25,20 @@
 	MemoTableViewController *memoViewController = [[MemoTableViewController alloc] init];
 	memoViewController.managedObjectContext = self.managedObjectContext;
 	
-	UINavigationController *aNavigationController = [[UINavigationController alloc] initWithRootViewController:memoViewController];
-	self.navigationController = aNavigationController;
-	[aNavigationController release];
-    
-	[self.window addSubview:self.navigationController.view];
+	TagTableViewController *tagViewController = [[TagTableViewController alloc] init];
+	tagViewController.managedObjectContext = self.managedObjectContext;
+	
+	UINavigationController *memoNavigationController = [[UINavigationController alloc] initWithRootViewController:memoViewController];
+	UINavigationController *tagNavigationController = [[UINavigationController alloc] initWithRootViewController:tagViewController];
+	
+	//NSArrayでビューをまとめて格納
+	NSArray *controllers = [NSArray arrayWithObjects:memoNavigationController, tagNavigationController, nil];
+	//タブの中にコントローラを入れ
+	UITabBarController *aTabBarController = [[UITabBarController alloc] init];
+	[aTabBarController setViewControllers:controllers];
+	self.tabBarController = aTabBarController;    
+	
+	[self.window addSubview:self.tabBarController.view];
     [self.window makeKeyAndVisible];
     
     return YES;
