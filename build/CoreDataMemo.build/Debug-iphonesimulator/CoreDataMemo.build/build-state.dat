@@ -1,7 +1,7 @@
 TCoreDataMemo
 v7
 r0
-t331989130.627009
+t332166129.449960
 cCheck dependencies
 cProcessInfoPlistFile "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/build/Debug-iphonesimulator/CoreDataMemo.app/Info.plist" CoreDataMemo-Info.plist
 cCompileXIB "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/MainWindow.xib"
@@ -354,7 +354,7 @@ s906
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies331989130#331989130#0(0"0(0#1#0"8663218368#0"0#
+lSLF07#2@18"Check dependencies332166129#332166129#0(0"0(0#1#0"27303364805329008#0"0#
 
 CCompileC build/CoreDataMemo.build/Debug-iphonesimulator/CoreDataMemo.build/Objects-normal/i386/CoreDataMemoAppDelegate.o "/Users/lighttiger2505/Documents/GeekLab/CoreData Lesson/CoreDataMemo_FakeEverNote/Classes/CoreDataMemoAppDelegate.m" normal i386 objective-c com.apple.compilers.gcc.4_2
 s331911688.306892

@@ -6,17 +6,17 @@
 //  Copyright 2011 nagoya-bunri. All rights reserved.
 //
 
-#import "MemoDetailViewController.h"
+#import "MemoEditorViewController.h"
 
 #import "Memo.h"
 #import "Tag.h"
-#import "TagSelectViewController.h"
+#import "TagEditorViewController.h"
 
 #define TITLE_CELL_HEIGHT 40
 #define TAG_CELL_HEIGHT   40
 #define TEXT_CELL_HEIGHT  418
 
-@implementation MemoDetailViewController
+@implementation MemoEditorViewController
 
 @synthesize titleView, textView;
 @synthesize memo;
@@ -52,11 +52,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	self.title = memo.title;
+    if (memo.title != nil) {
+        self.title = memo.title;
+    } else {
+        self.title = @"新規メモ";
+    }
 	
 	// ナビゲーションバー右にキーボードを画すボタンを追加
-	self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel 
-																							target:self action:@selector(finish:)] autorelease];
+	self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem
+                                               :UIBarButtonSystemItemCancel 
+target:self action:@selector(finish:)] autorelease];
 	
 	self.tableView.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
 	
@@ -99,25 +104,39 @@
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:YES];
 	
-	// メモの保存を実行。
-	[self saveMemo:nil];
+	// 何も文字列を入力していない場合
+	if (titleView.text.length == 0 && textView.text.length == 0) {
+		// メモの削除を実行
+		[self deleteMemo];
+	}else {
+		// メモの保存を実行。
+		[self saveMemo];
+	}
 }
 
 /**
  メモを保存する。
  */
-- (void)saveMemo:(id)sender {
+- (void)saveMemo {
 	// 変更内容をデータオブジェクトに反映。
-	memo.title = self.titleView.text;
-	memo.text = self.textView.text;
-	memo.timestamp = [[NSDate date] retain];
-	
+	memo.title = titleView.text;
+    memo.text = textView.text;
+    memo.timestamp = [[NSDate date] retain];
+    
 	// コンテキストに保存内容を反映。
 	NSError *error;
 	if (![[memo managedObjectContext] save:&error]) {
 		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 		exit(-1);  // Fail
 	}
+}
+
+/** 
+ メモを削除する。
+ */
+- (void)deleteMemo {
+	// メモの削除を実行
+	[[memo managedObjectContext] deleteObject:memo];
 }
 
 /**
@@ -269,7 +288,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 {	
 	// タグのセルが選択された場合、タグを選択する画面へと遷移する。
 	if (indexPath.row == 1) {
-		TagSelectViewController *aTagViewController = [[TagSelectViewController alloc] initWithStyle:UITableViewStyleGrouped];
+		TagEditorViewController *aTagViewController = [[TagEditorViewController alloc] initWithStyle:UITableViewStyleGrouped];
 		aTagViewController.memo = memo;
 		aTagViewController.managedObjectContext = self.memo.managedObjectContext;
 		[self.navigationController pushViewController:aTagViewController animated:YES];

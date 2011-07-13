@@ -6,12 +6,12 @@
 //  Copyright 2011 nagoya-bunri. All rights reserved.
 //
 
-#import "TagSelectViewController.h"
+#import "TagEditorViewController.h"
 
 #import "Memo.h"
 #import "Tag.h"
 
-@implementation TagSelectViewController
+@implementation TagEditorViewController
 
 @synthesize fetchedResultsController, managedObjectContext;
 @synthesize newTagView;

@@ -9,6 +9,7 @@
 #import "MemoTableViewController.h"
 
 #import "Memo.h"
+#import "MemoEditorViewController.h"
 
 @implementation MemoTableViewController
 
@@ -45,18 +46,25 @@
 #pragma mark -
 #pragma mark View lifecycle
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.title = @"メモ";
+        self.tabBarItem = [[[UITabBarItem alloc] initWithTitle:@"メモ" image:[UIImage imageNamed:@"tag.png"] tag:0] autorelease];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
-	self.title = @"メモ";
-	
+		
 	// ナビゲーションバーに編集ボタンを作成。
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 	
 	// ナビゲーションバーに追加ボタンを作成。
-	UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd 
-																			   target:self 
-																			   action:@selector(addMemo:)];
+	UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewMemo:)];
+                                
 	self.navigationItem.rightBarButtonItem = addButton;
 	[addButton release];
 	
@@ -97,20 +105,18 @@
 /**
  メモの追加処理を行う。
  */
-- (IBAction)addMemo:sender
+- (IBAction)addNewMemo:sender
 {
 	// 追加用ビューを作成。
-	MemoAddViewController *addViewController = [[MemoAddViewController alloc] init];
+	MemoEditorViewController *memoEditorViewController = [[MemoEditorViewController alloc] init];
 	
 	// メモのエンティティを追加。
-	addViewController.memo = (Memo*)[NSEntityDescription insertNewObjectForEntityForName:@"Memo" inManagedObjectContext:self.managedObjectContext];
+	memoEditorViewController.memo = (Memo*)[NSEntityDescription insertNewObjectForEntityForName:@"Memo" inManagedObjectContext:self.managedObjectContext];
 	
-	// モーダルで追加メモの編集ビューを表示
-	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:addViewController];
-    [self presentModalViewController:navController animated:YES];
+	// 追加メモの編集ビューをへ移動
+	[self.navigationController pushViewController:memoEditorViewController animated:YES];
 	
-	[addViewController release];
-	[navController release];
+	[memoEditorViewController release];
 }
 
 #pragma mark -
@@ -164,23 +170,6 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView
-  willDisplayCell:(UITableViewCell *)cell
-forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // For even
-    if (indexPath.row % 2 == 0) {
-        cell.backgroundColor = [UIColor whiteColor];
-    }
-    // For odd
-    else {
-        cell.backgroundColor = [UIColor colorWithHue:0.61
-										  saturation:0.09
-										  brightness:0.99
-											   alpha:1.0];
-    }
-}
-
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
@@ -191,11 +180,6 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 		// Save the context.
 		NSError *error;
 		if (![context save:&error]) {
-			/*
-			 Replace this implementation with code to handle the error appropriately.
-			 
-			 abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
-			 */
 			NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 			abort();
 		}
@@ -211,7 +195,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
     // 選択したセルの情報の詳細表示ビューを作成して、そのビューに移動。
-    MemoDetailViewController *detailViewController = [[MemoDetailViewController alloc] init];
+    MemoEditorViewController *detailViewController = [[MemoEditorViewController alloc] init];
 	detailViewController.memo = (Memo*)[self.fetchedResultsController objectAtIndexPath:indexPath];
 	[self.navigationController pushViewController:detailViewController animated:YES];
     [detailViewController release];

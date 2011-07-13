@@ -13,7 +13,7 @@
 /**
  メモの詳細情報を表示するビューのコントローラー
  */
-@interface MemoDetailViewController : UITableViewController <UITextViewDelegate>{
+@interface MemoEditorViewController : UITableViewController <UITextViewDelegate>{
 	UITextField *titleView;
 	UITextView *textView;
 	Memo *memo;
@@ -23,7 +23,8 @@
 @property(nonatomic, retain) UITextView *textView;
 @property(nonatomic, retain) NSManagedObject *memo;
 
-- (void)saveMemo:(id)sender;
+- (void)saveMemo;
+- (void)deleteMemo;
 - (void)configureTitleCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 - (void)configureTagCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 - (void)configureTextCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;

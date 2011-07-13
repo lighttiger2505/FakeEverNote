@@ -15,7 +15,7 @@
 /**
  タグ選択を行うビューのコントローラー
  */
-@interface TagSelectViewController : UITableViewController <NSFetchedResultsControllerDelegate, NewTagViewDelegate>{
+@interface TagEditorViewController : UITableViewController <NSFetchedResultsControllerDelegate, NewTagViewDelegate>{
     NSFetchedResultsController *fetchedResultsController;
     NSManagedObjectContext *managedObjectContext;
 	

@@ -8,6 +8,8 @@
 
 #import "TagTableViewController.h"
 
+#import "MemoBelongTagTableViewController.h"
+
 #import "Tag.h"
 
 @implementation TagTableViewController
@@ -31,64 +33,42 @@
 
 
 - (void)dealloc {
+    [fetchedResultsController release];
+    [managedObjectContext release];
     [super dealloc];
 }
 
 #pragma mark -
-#pragma mark Initialization
-
-/*
-- (id)initWithStyle:(UITableViewStyle)style {
-    // Override initWithStyle: if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-    self = [super initWithStyle:style];
+#pragma mark View lifecycle
+ 
+- (id)init
+{
+    self = [super init];
     if (self) {
-        // Custom initialization.
+        self.title = @"タグ";
+        self.tabBarItem = [[[UITabBarItem alloc] initWithTitle:@"タグ" image:[UIImage imageNamed:@"tag.png"] tag:0] autorelease];
     }
     return self;
 }
-*/
 
-
-#pragma mark -
-#pragma mark View lifecycle
-
-/*
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-*/
 
-/*
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    NSError *error = nil;
+    if (![fetchedResultsController performFetch:&error]) {
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+    
+    [self.tableView reloadData];
 }
-*/
-/*
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-}
-*/
-/*
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-}
-*/
-/*
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-}
-*/
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations.
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
-
 
 #pragma mark -
 #pragma mark Table view data source
@@ -142,14 +122,12 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-    [detailViewController release];
-    */
+    MemoBelongTagTableViewController *memoBelongtagTableViewConroller = [[MemoBelongTagTableViewController alloc] init];
+    Tag *selectedTag = [fetchedResultsController objectAtIndexPath:indexPath];
+    memoBelongtagTableViewConroller.selectedTag = selectedTag;
+    
+    [self.navigationController pushViewController:memoBelongtagTableViewConroller animated:YES];
+    [memoBelongtagTableViewConroller release];
 }
 
 /**
