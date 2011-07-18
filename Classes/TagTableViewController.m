@@ -46,7 +46,7 @@
     self = [super init];
     if (self) {
         self.title = @"タグ";
-        self.tabBarItem = [[[UITabBarItem alloc] initWithTitle:@"タグ" image:[UIImage imageNamed:@"tag.png"] tag:0] autorelease];
+        self.tabBarItem = [[[UITabBarItem alloc] initWithTitle:@"タグ" image:[UIImage imageNamed:@"TagIcon.png"] tag:0] autorelease];
     }
     return self;
 }

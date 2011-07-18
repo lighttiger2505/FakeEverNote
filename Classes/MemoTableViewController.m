@@ -51,7 +51,7 @@
     self = [super init];
     if (self) {
         self.title = @"メモ";
-        self.tabBarItem = [[[UITabBarItem alloc] initWithTitle:@"メモ" image:[UIImage imageNamed:@"tag.png"] tag:0] autorelease];
+        self.tabBarItem = [[[UITabBarItem alloc] initWithTitle:@"メモ" image:[UIImage imageNamed:@"MemoIcon.png"] tag:0] autorelease];
     }
     return self;
 }
