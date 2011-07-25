@@ -18,4 +18,6 @@
 @property (nonatomic, retain) Tag *selectedTag;
 @property (nonatomic, retain) NSMutableArray *memoArray;
 
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+
 @end

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ 作成されたメモを一覧で表示するビューコントローラー。
+ */
 @interface MemoTableViewController : UITableViewController <NSFetchedResultsControllerDelegate, UISearchDisplayDelegate>{
     NSFetchedResultsController *fetchedResultsController;
     NSManagedObjectContext *managedObjectContext;

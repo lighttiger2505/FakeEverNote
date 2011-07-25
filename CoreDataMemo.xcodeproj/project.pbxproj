@@ -84,10 +84,10 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				7ACDC2FB13DB8B2F007C2AED /* TagTabVC */,
+				7ACDC2FA13DB8B04007C2AED /* MemoTabVC */,
 				7A0F336313CDC7BD001F72B1 /* AppDelegate */,
 				7A022BC313C35A7200BE48CA /* Model */,
-				7A8D011313B7777D00030C66 /* Tag */,
-				7A8D011213B776F000030C66 /* Memo */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -174,30 +174,30 @@
 			name = AppDelegate;
 			sourceTree = "<group>";
 		};
-		7A8D011213B776F000030C66 /* Memo */ = {
+		7ACDC2FA13DB8B04007C2AED /* MemoTabVC */ = {
 			isa = PBXGroup;
 			children = (
 				7AF4C14013AA38E200825CA9 /* MemoTableViewController.h */,
 				7AF4C14113AA38E200825CA9 /* MemoTableViewController.m */,
 				7AF4C1D213AA401700825CA9 /* MemoEditorViewController.h */,
 				7AF4C1D313AA401700825CA9 /* MemoEditorViewController.m */,
+				7A8D010F13B7761600030C66 /* TagEditorViewController.h */,
+				7A8D011013B7761600030C66 /* TagEditorViewController.m */,
+				7AC7889A13C1194E0034A251 /* NewTagView.h */,
+				7AC7889B13C1194E0034A251 /* NewTagView.m */,
 			);
-			name = Memo;
+			name = MemoTabVC;
 			sourceTree = "<group>";
 		};
-		7A8D011313B7777D00030C66 /* Tag */ = {
+		7ACDC2FB13DB8B2F007C2AED /* TagTabVC */ = {
 			isa = PBXGroup;
 			children = (
 				7A09C44F13C88D7D00F41B96 /* TagTableViewController.h */,
 				7A09C45013C88D7D00F41B96 /* TagTableViewController.m */,
 				7A0F336713CDC9A3001F72B1 /* MemoBelongTagTableViewController.h */,
 				7A0F336813CDC9A3001F72B1 /* MemoBelongTagTableViewController.m */,
-				7AC7889A13C1194E0034A251 /* NewTagView.h */,
-				7AC7889B13C1194E0034A251 /* NewTagView.m */,
-				7A8D010F13B7761600030C66 /* TagEditorViewController.h */,
-				7A8D011013B7761600030C66 /* TagEditorViewController.m */,
 			);
-			name = Tag;
+			name = TagTabVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +225,9 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0410;
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CoreDataMemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -290,6 +293,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CoreDataMemo_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INFOPLIST_FILE = "CoreDataMemo-Info.plist";
 				PRODUCT_NAME = CoreDataMemo;
 			};
@@ -302,6 +306,7 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CoreDataMemo_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INFOPLIST_FILE = "CoreDataMemo-Info.plist";
 				PRODUCT_NAME = CoreDataMemo;
 				VALIDATE_PRODUCT = YES;
@@ -316,7 +321,6 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PREBINDING = NO;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -330,7 +334,6 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PREBINDING = NO;
 				SDKROOT = iphoneos;
 			};
 			name = Release;

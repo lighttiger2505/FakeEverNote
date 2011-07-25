@@ -22,6 +22,7 @@
 @property (nonatomic, retain) UITextField *newTagName;
 
 - (IBAction) saveNewTag;
+- (void)endEditing;
 
 @end
 

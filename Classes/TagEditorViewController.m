@@ -21,15 +21,10 @@
 #pragma mark Memory management
 
 - (void)didReceiveMemoryWarning {
-    // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-    
-    // Relinquish ownership any cached data, images, etc. that aren't in use.
 }
 
 - (void)viewDidUnload {
-    // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
-    // For example: self.myOutlet = nil;
 }
 
 
@@ -42,9 +37,11 @@
 #pragma mark -
 #pragma mark View lifecycle
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
 	
+    // タグを新規作成する為の情報入力ビューをテーブルのヘッダーとして登録
 	NewTagView *aNewTagView = [[NewTagView alloc] init];
 	aNewTagView.delegate = self;
 	self.newTagView = aNewTagView;
@@ -76,8 +73,6 @@
     return [sectionInfo numberOfObjects];
 }
 
-
-// Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"Cell";
@@ -92,9 +87,13 @@
     return cell;
 }
 
+/**
+ タグの内容を表示するセル内容を編集
+ */
 - (void)configureTagNameCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
 	Tag *tag = [self.fetchedResultsController objectAtIndexPath:indexPath];
 	cell.textLabel.text = tag.name;
+    // 既に登録されているタグのセルならばチェックを入れる
 	if ([self isEntryTag:tag]) {
 		cell.accessoryType = UITableViewCellAccessoryCheckmark;
 	}
@@ -103,6 +102,9 @@
 #pragma mark -
 #pragma mark Table view delegate
 
+/**
+ 引数として渡されたタグが編集中のメモに登録されているかをチェックする
+ */
 - (BOOL)isEntryTag:(Tag*)tag {
 	for (Tag *entryTag in memo.tag) {
 		if (entryTag == tag) {
@@ -119,6 +121,7 @@
 	
 	// 既に登録されているタグならば
 	if ([self isEntryTag:selectedTag]) {
+        // タグをメモを登録して
 		cell.accessoryType = UITableViewCellAccessoryNone;
 		[selectedTag removeMemoObject:memo];
 		[memo removeTagObject:selectedTag];
@@ -137,6 +140,9 @@
 #pragma mark -
 #pragma mark NewTagView delegate
 
+/**
+ タグの新規作成イベントが起きた際に呼び出されるデリゲート
+ */
 - (void)newTagView:(NewTagView*)createNewTag :(NSString*)newTagName 
 {
 	// タグを新規作成

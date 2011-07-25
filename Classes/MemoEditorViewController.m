@@ -46,9 +46,6 @@
 #pragma mark -
 #pragma mark View lifecycle
 
-/**
- ビューのロード後に呼び出される。
- */
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
@@ -59,9 +56,9 @@
     }
 	
 	// ナビゲーションバー右にキーボードを画すボタンを追加
-	self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem
-                                               :UIBarButtonSystemItemCancel 
-target:self action:@selector(finish:)] autorelease];
+	self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel 
+                                                                                            target:self 
+                                                                                            action:@selector(finish:)] autorelease];
 	
 	self.tableView.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
 	
@@ -82,10 +79,6 @@ target:self action:@selector(finish:)] autorelease];
 	
 }
 
-/**
- ビューを開いた際に呼び出される。
- 渡されたメモの内容を反映。
- */
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:YES];
 	
@@ -97,10 +90,6 @@ target:self action:@selector(finish:)] autorelease];
 	[self.titleView becomeFirstResponder];
 }
 
-/**
- ビューを閉じた際に呼び出される。
- メモの保存を実行。
- */
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:YES];
 	
@@ -114,9 +103,6 @@ target:self action:@selector(finish:)] autorelease];
 	}
 }
 
-/**
- メモを保存する。
- */
 - (void)saveMemo {
 	// 変更内容をデータオブジェクトに反映。
 	memo.title = titleView.text;
@@ -131,17 +117,13 @@ target:self action:@selector(finish:)] autorelease];
 	}
 }
 
-/** 
- メモを削除する。
- */
 - (void)deleteMemo {
 	// メモの削除を実行
 	[[memo managedObjectContext] deleteObject:memo];
 }
 
-/**
- テキスト編集開始時に呼び出されるメソッド
- */
+#pragma mark -
+#pragma mark UITextViewDelegate
 - (void)textViewDidBeginEditing:(UITextView *)handleTextView {
 	// このメソッドの送信元がメモの編集ビューならば
 	if(handleTextView == self.textView) {
@@ -156,9 +138,6 @@ target:self action:@selector(finish:)] autorelease];
 	}
 }
 
-/**
- テキスト編集終了時に呼び出されるメソッド
- */
 - (void)textViewDidEndEditing:(UITextView *)handleTextView {
 	// このメソッドの送信元がメモの編集ビューならば
 	if(handleTextView == self.textView) {

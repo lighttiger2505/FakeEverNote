@@ -25,6 +25,7 @@
         self.frame = CGRectMake(0, 0, 320, 100);
 		self.backgroundColor = [UIColor groupTableViewBackgroundColor];
 		
+        // タグの名称を入力するフィールドを作成
 		UITextField *aNewTagName = [[UITextField alloc] initWithFrame:CGRectMake(10, 5, 300, 40)];
 		aNewTagName.font = [UIFont systemFontOfSize:20.0f];
 		aNewTagName.borderStyle = UITextBorderStyleRoundedRect;
@@ -32,6 +33,7 @@
 		[self addSubview:self.newTagName];
 		[aNewTagName release];
 		
+        // セーブボタンを作成
 		UIButton *save = [UIButton buttonWithType:111];
 		[save addTarget:self action:@selector(saveNewTag) forControlEvents:UIControlEventTouchUpInside];
 		save.frame = CGRectMake(10, 50, 300, 40);
@@ -41,10 +43,15 @@
     return self;
 }
 
+- (void)endEditing {
+    [self.newTagName resignFirstResponder];
+}
+
 - (IBAction) saveNewTag {
 	if (!self.newTagName.text.length == 0) {
+        // デリゲートに保存内容を投げる
 		[delegate newTagView:self :self.newTagName.text];
-		[self.newTagName resignFirstResponder];
+		[self endEditing];
 	}
 }
 
